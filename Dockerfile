@@ -21,6 +21,8 @@ RUN chmod +x ./install-reddit.sh
 
 RUN chmod +x ./install
 
+RUN apt-get install binutils
+
 MAINTAINER      mcrouter <mcrouter@fb.com>
 
 ENV             MCROUTER_DIR            /usr/local/mcrouter
