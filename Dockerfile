@@ -16,7 +16,7 @@ rm -rf /var/lib/apt/lists/*
 RUN  apt-get update \
   && apt-get install -y wget \
   && rm -rf /var/lib/apt/lists/*
-  
+
 RUN chmod +x ./install-reddit.sh
 
 #add a new user
@@ -29,6 +29,3 @@ RUN chmod +x ./install-reddit.sh
 #RUN apt-get install software-properties-common
 
 #RUN  ./install-reddit.sh
-
-
-
