@@ -32,11 +32,11 @@ ENV             DEBIAN_FRONTEND         noninteractive
 RUN             apt-get update && apt-get install -y git && \
                 mkdir -p $MCROUTER_DIR/repo && \
                 cd $MCROUTER_DIR/repo
-RUN             git clone $MCROUTER_REPO 
+RUN             git clone $MCROUTER_REPO
 
 #RUN             cd $MCROUTER_DIR/repo/mcrouter/mcrouter/scripts && \
-                ./clean_ubuntu_14.04.sh $MCROUTER_DIR && rm -rf $MCROUTER_DIR/repo && \
-                ln -s $MCROUTER_DIR/install/bin/mcrouter /usr/local/bin/mcrouter
+#                ./clean_ubuntu_14.04.sh $MCROUTER_DIR && rm -rf $MCROUTER_DIR/repo && \
+#                ln -s $MCROUTER_DIR/install/bin/mcrouter /usr/local/bin/mcrouter
 
 #add a new user
 #RUN useradd -ms /bin/bash newuser
