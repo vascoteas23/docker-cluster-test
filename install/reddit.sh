@@ -164,9 +164,10 @@ $RUNDIR/setup_rabbitmq.sh
 ###############################################################################
 function install_reddit_repo {
     pushd $REDDIT_SRC/$1
+    echo $REDDIT_SRC/$1
     sudo -u $REDDIT_USER python setup.py build
     #$REDDIT_USER python setup.py build
-    python setup.py develop --no-deps
+    sudo python setup.py develop --no-deps
     popd
 }
 

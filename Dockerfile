@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu-upstart:14.04
 COPY Dockerfile /
 COPY install-reddit.sh /
 
@@ -30,8 +30,8 @@ ENV             MCROUTER_REPO           https://github.com/facebook/mcrouter.git
 ENV             DEBIAN_FRONTEND         noninteractive
 
 RUN             apt-get update && apt-get install -y git
-RUN                mkdir -p $MCROUTER_DIR/repo 
-RUN                cd $MCROUTER_DIR/repo
+RUN             mkdir -p $MCROUTER_DIR/repo
+RUN             cd $MCROUTER_DIR/repo
 RUN             git clone $MCROUTER_REPO
 
 #RUN             cd $MCROUTER_DIR/repo/mcrouter/mcrouter/scripts && \
